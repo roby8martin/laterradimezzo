@@ -20,13 +20,21 @@ CREATE TABLE `USERS` (
 INSERT INTO `USERS` (`ID`, `USERNAME`, `PASSWORD`, `TOKEN`, `ATTIVO`, `ADMIN`, `BAN`, `MOTIVOBAN`, `DATA`) VALUES 
 (NULL, 'Admin', 'c484731969b767820934f6fb74a803f05b382e4b5b10383f6819a5374fcda0fb8d0d7e14f9cf6ef8f76d406669c081821fc6f32d068e98b3f831b163c8a0f84b', '', '1', '1', '0', '', '08/08/2021');
 
+CREATE TABLE `CATEGORIA` (
+  `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `CATEGORIA` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`ID`)
+);
+
 CREATE TABLE `RETE` (
   `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `IP` VARCHAR(15) NOT NULL, #inserire l'ip che si ha dato alla machina in modo da ricrdarci quale è corretto
-  `NOMEPC` VARCHAR(255) NOT NULL, #nome del server
+  `NOMEPC` VARCHAR(255) NOT NULL, #nome del server che usa per fare i ping
   `FOTO` TEXT NOT NULL, #percorso della foto
+  `CATEGORIA` VARCHAR(255) NOT NULL, #di che parte fa il server
   `ATTIVO` INT(1) NOT NULL,
   `NOTE` TEXT NOT NULL,
   PRIMARY KEY (`ID`)
 );
+
 

@@ -19,11 +19,15 @@ include 'navbar.php';
           <h1 class="mb-3">La Terra Di Mezzo</h1> 
         
           <h2> Ciao <?php echo $session_user;?> 👋 </h2>
-          <p class="font-weight-semibold">
-            Ogni <b>Lunedì</b> di ogni settimana devi controllare nella email <b class="text-primary">backup@byter.it</b> tutti i backup dei clienti.<br>
-            Se durante una settima un backup qualsiasi di un cliente ha un problema. Avverire il reparto gestione che avvertirà il cliente.<br>
-            Una volta compltato il controllo ogni mese inviare una email al cliente se è tutto a posto o meno.
-          </p>
+
+          <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+            <img src="../img/icone/master.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Master</h5>
+              <a href="#" class="btn btn-success">Vedi dispositivi <i class="fas fa-find"></i></a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

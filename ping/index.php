@@ -15,9 +15,10 @@ include '../sito/navbar.php';
       <div class="row">
         <div class="col-sm-8">
           <h1 class="mb-3">La Terra Di Mezzo</h1> 
-          <div id="ping"></div>
-        
+            <a href="aggiungi.php" class="btn btn-outline-primary">Aggiungi dispositivo <i class="fas fa-plus"></i> <i class="fas fa-server"></i></a>
+            <br>
         </div>
+        <div id="ping"></div>
       </div>
     </div>
 
