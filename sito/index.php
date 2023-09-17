@@ -15,22 +15,40 @@ include 'navbar.php';
   <?php echo $index ?>  
     <div class="container">
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-12">
           <h1 class="mb-3">La Terra Di Mezzo</h1> 
         
           <h2> Ciao <?php echo $session_user;?> 👋 </h2>
-
-          <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-            <img src="../img/icone/master.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Master</h5>
-              <a href="#" class="btn btn-success">Vedi dispositivi <i class="fas fa-find"></i></a>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+        
+          <?php 
+            $sql='SELECT * FROM `CATEGORIA`';
+            $result = mysqli_query($conn, $sql);
+            while($row = mysqli_fetch_array($result)){
+              echo'
+                <div class="col-sm-3">
+                  <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <img src="'.$row['FOTO'].'" class="card-img-top" alt="'.$row['CATEGORIA'].'">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">'.$row['CATEGORIA'].'</h5>
+                      <div class="text-center">
+                        <a href="../on/index.php?categoria='.$row['CATEGORIA'].'" class="btn btn-outline-light">Accendi / Spegni <br> <i class="fas fa-power-off"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ';
+            }
+          ?>
+
+      </div>
+     </div>
+
+     
 
     <!-- Footer -->
     <?php echo $footer ?>

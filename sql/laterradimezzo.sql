@@ -9,7 +9,6 @@ CREATE TABLE `USERS` (
   `TOKEN` VARCHAR(255) NOT NULL,
   `ATTIVO` INT(1) NOT NULL,
   `ADMIN` INT(1) NOT NULL,
-  `CESTINO` INT(1) NOT NULL,
   `BAN` INT(1) NOT NULL,
   `MOTIVOBAN` TEXT NOT NULL,
   `DATA` VARCHAR(12) NOT NULL,
@@ -23,15 +22,18 @@ INSERT INTO `USERS` (`ID`, `USERNAME`, `PASSWORD`, `TOKEN`, `ATTIVO`, `ADMIN`, `
 CREATE TABLE `CATEGORIA` (
   `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `CATEGORIA` VARCHAR(255) NOT NULL,
+  `FOTO` TEXT NOT NULL, #percorso della foto
   PRIMARY KEY (`ID`)
 );
 
 CREATE TABLE `RETE` (
   `ID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `IP` VARCHAR(15) NOT NULL, #inserire l'ip che si ha dato alla machina in modo da ricrdarci quale è corretto
+  `MAC` VARCHAR(17) NOT NULL, #inserire l'ip della macchina per il Wake On Lan
   `NOMEPC` VARCHAR(255) NOT NULL, #nome del server che usa per fare i ping
   `FOTO` TEXT NOT NULL, #percorso della foto
   `CATEGORIA` VARCHAR(255) NOT NULL, #di che parte fa il server
+  `TIPO` VARCHAR(255) NOT NULL, #di che parte fa il server
   `ATTIVO` INT(1) NOT NULL,
   `NOTE` TEXT NOT NULL,
   PRIMARY KEY (`ID`)

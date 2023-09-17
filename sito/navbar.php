@@ -7,7 +7,7 @@ $index='
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0d6efd">
+    <meta name="theme-color" content="#198754">
     <!-- Bootstrap CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/dark-mode.css" rel="stylesheet">
@@ -56,7 +56,7 @@ $ping='
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0d6efd">
+    <meta name="theme-color" content="#198754">
     <!-- Bootstrap CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/dark-mode.css" rel="stylesheet">
@@ -97,14 +97,14 @@ $ping='
     </nav>
 ';
 
-$clienti='
+$device='
 <!doctype html>
 <html lang="it-IT">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0d6efd">
+    <meta name="theme-color" content="#198754">
     <!-- Bootstrap CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/dark-mode.css" rel="stylesheet">
@@ -127,13 +127,10 @@ $clienti='
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../sito/index.php">Home <i class="fas fa-home"></i></a>
+              <a class="nav-link active" aria-current="page" href="../sito/index.php">Home <i class="fas fa-home"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../backup/index.php">Backup <i class="fas fa-save"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../clienti/index.php">Clienti <i class="fas fa-users"></i></a>
+              <a class="nav-link " aria-current="page" href="../ping/index.php">Lista Server <i class="fas fa-save"></i></a>
             </li>
           </ul>
           <form class="d-flex">
@@ -155,7 +152,7 @@ $settings='
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0d6efd">
+    <meta name="theme-color" content="#198754">
     <!-- Bootstrap CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/dark-mode.css" rel="stylesheet">

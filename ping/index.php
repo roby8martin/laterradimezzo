@@ -15,20 +15,34 @@ include '../sito/navbar.php';
       <div class="row">
         <div class="col-sm-8">
           <h1 class="mb-3">La Terra Di Mezzo</h1> 
-            <a href="aggiungi.php" class="btn btn-outline-primary">Aggiungi dispositivo <i class="fas fa-plus"></i> <i class="fas fa-server"></i></a>
+            <a href="categoria.php" class="btn btn-outline-primary">Aggiungi dispositivo <i class="fas fa-plus"></i> <i class="fas fa-server"></i></a>
             <br>
         </div>
-        <div id="ping"></div>
+
+        <div id="ping">
+          <div class="text-center">
+            <h3>Caricamento</h3>
+            <div class="spinner-border text-success" role="status"></div>
+              <div id="attesa">
+              </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- Footer -->
     <?php echo $footer ?>
-    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.min.js"></script>   
     <script>
       setInterval(function(){
         $('#ping').load("pinglive.php").fadeIn("slow")
       } , 1000);
+    </script>
+    <script>
+      setInterval(function(){
+        $('#attesa').load("attesa.php").fadeIn("slow")
+      } , 2000);
     </script>
   </body>
 </html>

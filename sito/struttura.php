@@ -45,7 +45,7 @@ $footer = '
     <hr>
       <p class="text-muted" aligne="centre">
         <em>
-          Web site developed by <a href="https://github.com/roby8martin/" target=”_blank”>Roby8martin</a> for <a href="https://byter.it" target=”_blank”>Byter</a>
+          Web site developed by <a href="https://github.com/roby8martin/" target=”_blank”>Roby8martin</a> for <b>PasFilm®</b>
         </em> 
       </p>
     </hr>
