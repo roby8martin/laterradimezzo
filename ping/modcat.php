@@ -9,6 +9,10 @@ if ($rowban['BAN'] === '0') {
 include '../sito/navbar.php';
 	$session_user = htmlspecialchars($_SESSION['session_user'], ENT_QUOTES, 'UTF-8');
 	$session_id = htmlspecialchars($_SESSION['session_id']);
+
+  $cat=$_GET['cat'];
+  $sql2='SELECT * FROM `RETE` WHERE CATEGORIA = "'.$cat.'"';
+  $result2 = mysqli_query($conn, $sql2);
 ?>
   <?php echo $ping ?>
     <div class="container">
@@ -21,35 +25,34 @@ include '../sito/navbar.php';
         </div>
 
         <div class="col-sm-4">
+          
         </div>
 
         <div class="col-sm-12">
-        
         <?php
-          $cat=$_GET['cat'];
-
-          $sql2='SELECT * FROM `RETE` WHERE CATEGORIA = "'.$cat.'"';
-          $result2 = mysqli_query($conn, $sql2);
-
           echo'
-          <div class="text-center">
-            <h1 class="text-danger">!!ATTENZIONE!!</h1>
-            <h4>Stai per <b class="text-danger">ELIMINARE</b> tutta la categoria "<b>'.$cat.'</b>"</h4>
-            <h4 class="text-danger">Con anche i seguenti dispostivi:</h4>
-            ';
-            while($row2 = mysqli_fetch_array($result2)){
-              echo '<h1><i class="fas fa-circle fa-xs"></i> '.$row2['NOMEPC'].'</h1>';
-            }
-            
+            <h1 class="text-light">Stai modificando il nome della categoria '.$cat.'</h1>
+          '
+          ?>
+        </div>
+
+        <div class="col-sm-4">
+        <?php
           echo'
             <br>
-            <h2>UNA VOLTA ELIMINIATI BISOGNA AGGIUNGERLI MANULAMENTE DINUOVO</h2>
-            <h1 class="text-danger">SEI SICURO DI VOLER PROCEDERE??</h1>
-          </div>
+            <h4>Nome categoria</h4><br>
+            <form method="post" action="modcatok.php">
+              <label>Nome categoria</label>
+              <div class="input-group mb-3">
+                <input class="form-control" type="text" id="catedit" value="'.$cat.'" placeholder="Nome categoria" name="catedit" required>
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span><br>
+              </div>
+              <input hidden type="text" id="cat" value="'.$cat.'" placeholder="Nome categoria" name="cat" required>
+              <button type="submit" class="btn btn-outline-primary" name="login">Modifica</button>
+            </form>
           ';
         ?>
         <br>
-        <a href="delcatok.php?cat=<?php echo $cat?>" class="btn btn-outline-danger">Ok gho capio 😒 scansea pure <i class="fas fa-trash"></i></a>
         </div>      
 
       </div>
